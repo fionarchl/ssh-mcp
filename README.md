@@ -375,18 +375,6 @@ Important limitations:
 - Docker access may be equivalent to root access depending on the host configuration.
 - An AI agent can make mistakes, misunderstand intent, or run commands with unintended side effects.
 
-If you fork this for serious use, consider adding:
-
-- Allowlisted commands
-- Read-only mode
-- Per-tool confirmation rules
-- Audit logging
-- Path allowlists
-- Separate SSH users per environment
-- Forced commands in `authorized_keys`
-- Container allowlists
-- Rate limits and command timeouts by tool
-
 ## Troubleshooting
 
 ### MCP server failed to connect

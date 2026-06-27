@@ -218,20 +218,6 @@ If `ping` works, verify SSH:
 Use ssh-mcp exec to run whoami on the remote server.
 ```
 
-### Why Setup Is Separate
-
-The MCP server cannot safely ask interactive questions during normal MCP launch because stdio is used for protocol messages between the client and server. Interactive setup is therefore exposed as a separate command:
-
-```bash
-npm run setup
-```
-
-or, after building:
-
-```bash
-node /absolute/path/to/ssh-mcp/dist/index.js setup
-```
-
 ## Tool Reference
 
 All tools return structured JSON. Successful responses include `success: true`; failures include `success: false` and an `error` message.
@@ -444,27 +430,6 @@ Pass a larger timeout to `exec`:
 ```
 
 Timeouts are capped at 300000 milliseconds.
-
-## Roadmap
-
-Possible future additions:
-
-- `upload_file`
-- `download_file`
-- `search_text`
-- `docker_ps`
-- `docker_stats`
-- Docker Compose support
-- PM2 support
-- systemd service status
-- Health checks
-- Multiple SSH hosts
-- SSH connection pooling
-- Streaming command output
-- Command cancellation
-- Audit logging
-- Read-only mode
-- Command allowlists
 
 ## Responsible Use
 

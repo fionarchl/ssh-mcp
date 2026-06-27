@@ -135,6 +135,14 @@ SSH_PRIVATE_KEY_PATH=/absolute/path/to/private/key
 
 The same values can also be provided as normal process environment variables through your shell, operating system, process manager, or MCP client configuration.
 
+Configuration priority:
+
+1. Environment variables already provided by the process
+2. Values loaded from the project `.env` file
+3. Missing variable error if neither exists
+
+By default, `.env` is loaded from the project root, next to `.env.example`, even when the MCP client launches the server from a different working directory.
+
 | Variable | Required | Description |
 | --- | --- | --- |
 | `SSH_HOST` | Yes | Remote server hostname or IP address |
